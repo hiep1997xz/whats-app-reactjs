@@ -1,0 +1,142 @@
+@import './Props.scss';
+
+body {
+  background: #d5dbdb;
+}
+
+.splash {
+  height: 200px;
+  width: 200px;
+}
+
+.green-belt {
+  background: #009788;
+  height: 15vh;
+}
+
+.messenger {
+  background: #fff;
+  top: 20px;
+  left: 40px;
+  right: 40px;
+  bottom: 20px;
+  border-radius: 5px;
+
+  .inbox {
+    width: 350px;
+    border-right: 1px solid #ddd;
+
+    .userbox {
+      background: #eee;
+      padding: 0 10px;
+      border-top-left-radius: 5px;
+
+      .you {
+        .user {
+          width: 40px;
+          height: 40px;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+      }
+      .actions {
+        flex: 1;
+        justify-content: flex-end;
+        button {
+          width: 50px;
+          height: 50px;
+          background: unset;
+          border: unset;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .search {
+      border-bottom: 1px solid #ddd;
+      border-top: 1px solid #ddd;
+      .sbox {
+        background: #fff;
+        flex: 1;
+        button {
+          cursor: pointer;
+          background: unset;
+          border: unset;
+          padding: 6px;
+        }
+        input {
+          flex: 1;
+          border: 0px;
+          outline: none;
+        }
+      }
+    }
+
+    .conv-list {
+      overflow-x: hidden;
+      overflow-y: auto;
+      flex: 1;
+      height: calc(100vh - 140px);
+      &::-webkit-scrollbar {
+        width: 8px;
+        height: 10px;
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: #b3b3b3;
+      }
+    }
+
+    .conversation {
+      padding: 5px 10px;
+      .you {
+        width: 50px;
+        margin-left: 5px;
+        .user {
+          width: 35px;
+          height: 35px;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .meta {
+        flex: 1;
+        border-bottom: 1px solid #f1f1f1;
+        padding: 0px 0px 10px 0px;
+        .name {
+        }
+        .info {
+          flex: 1;
+        }
+        .last-msg {
+        }
+      }
+
+      .extra {
+        .stamp {
+        }
+        .badge {
+          background: rgb(21, 179, 21);
+          max-width: 48px;
+          text-align: center;
+          border-radius: 40px;
+          padding: 0 3px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .chatbox {
+    flex: 1;
+  }
+}
